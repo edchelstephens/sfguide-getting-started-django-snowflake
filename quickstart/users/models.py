@@ -7,4 +7,3 @@ class User(AbstractUser):
     """Django User model."""
 
     is_verified = models.BooleanField(default=False)
-    USERNAME_FIELD = "email"
