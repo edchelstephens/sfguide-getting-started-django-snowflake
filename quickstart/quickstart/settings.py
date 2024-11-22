@@ -26,8 +26,15 @@ environ.Env.read_env(BASE_DIR / ".env")
 SECRET_KEY = "YOUR_SECRET_KEY"
 
 DEBUG = env("DJANGO_DEBUG")
+SNOWFLAKE_DATABASE = env("SNOWFLAKE_DATABASE")
+SNOWFLAKE_SCHEMA = env("SNOWFLAKE_SCHEMA")
+SNOWFLAKE_WAREHOUSE = env("SNOWFLAKE_WAREHOUSE")
+SNOWFLAKE_USER = env("SNOWFLAKE_USER")
+SNOWFLAKE_PASSWORD = env("SNOWFLAKE_PASSWORD")
+SNOWFLAKE_ACCOUNT = env("SNOWFLAKE_ACCOUNT")
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -83,8 +90,15 @@ WSGI_APPLICATION = "quickstart.wsgi.application"
 # You'll modify the 'default' entry below to connect to Snowflake instead
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django_snowflake",
+        "NAME": SNOWFLAKE_DATABASE,
+        "SCHEMA": SNOWFLAKE_SCHEMA,
+        "WAREHOUSE": SNOWFLAKE_WAREHOUSE,
+        "USER": SNOWFLAKE_USER,
+        "PASSWORD": SNOWFLAKE_PASSWORD,
+        "ACCOUNT": SNOWFLAKE_ACCOUNT,
+        # https://docs.snowflake.com/en/user-guide/python-connector-api.html#connect
+        "OPTIONS": {},
     }
 }
 
