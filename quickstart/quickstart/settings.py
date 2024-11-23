@@ -47,7 +47,11 @@ DJANGO_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-PROJECT_APPS = ["trips.apps.TripsConfig", "users.apps.UsersConfig"]
+PROJECT_APPS = [
+    "trips.apps.TripsConfig",
+    "users.apps.UsersConfig",
+    "todo.apps.TodoConfig",
+]
 
 THIRD_PARTY_APPS = ["django_extensions"]
 
