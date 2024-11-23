@@ -22,3 +22,7 @@ class Todo(models.Model):
         return "Todo(user={}, title={}, description={})".format(
             self.user.email, self.title, self.description
         )
+
+    def __str__(self):
+        """Human readable object string representation."""
+        return "{} - {}".format(self.title, self.description)
