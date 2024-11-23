@@ -6,7 +6,6 @@ class TodoAdmin(admin.ModelAdmin):
     """Todo model admin."""
 
     list_display = [
-        "id",
         "user",
         "title",
         "description",
@@ -19,9 +18,7 @@ class TodoAdmin(admin.ModelAdmin):
         "is_cancelled",
     ]
 
-    list_filter = [
-        "user",
-    ]
+    list_filter = ["user"]
 
     @admin.display(boolean=True)
     def is_in_progress(self, obj):
