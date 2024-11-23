@@ -3,4 +3,18 @@ from django.contrib import admin
 from users.models import User
 
 
-admin.site.register(User)
+class UserAdmin(admin.ModelAdmin):
+    """UserAdmin."""
+
+    list_display = [
+        "username",
+        "first_name",
+        "last_name",
+        "email",
+        "is_active",
+        "is_verified" "is_staff",
+        "date_joined",
+    ]
+
+
+admin.site.register(User, UserAdmin)
