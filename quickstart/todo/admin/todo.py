@@ -14,8 +14,8 @@ class TodoAdmin(admin.ModelAdmin):
         "created_at",
         "updated_at",
         "is_in_progress",
-        "is_completed",
         "is_cancelled",
+        "is_completed",
     ]
 
     list_filter = ["user"]
