@@ -7,17 +7,19 @@ class TodoAdmin(admin.ModelAdmin):
 
     list_display = [
         "id",
+        "user",
         "title",
         "description",
-        "user",
         "deadline",
+        "status",
         "created_at",
         "updated_at",
-        "is_completed",
-        "is_abandoned",
+        "is_in_progress",
     ]
 
-    list_filter = ["user", "is_completed", "is_abandoned"]
+    list_filter = [
+        "user",
+    ]
 
 
 admin.site.register(Todo, TodoAdmin)
