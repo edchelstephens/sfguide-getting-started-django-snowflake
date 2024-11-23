@@ -51,6 +51,7 @@ PROJECT_APPS = [
     "trips.apps.TripsConfig",
     "users.apps.UsersConfig",
     "todo.apps.TodoConfig",
+    "cortex.apps.CortexConfig",
 ]
 
 THIRD_PARTY_APPS = ["django_extensions"]
