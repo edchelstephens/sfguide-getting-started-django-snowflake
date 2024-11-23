@@ -1,1 +1,1 @@
-from quickstart.users.model.user import User
+from users.model.user import User
