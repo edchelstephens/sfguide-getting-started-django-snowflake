@@ -15,6 +15,7 @@ class UserAdmin(admin.ModelAdmin):
         "is_verified",
         "is_staff",
         "date_joined",
+        "last_login",
     ]
 
 
