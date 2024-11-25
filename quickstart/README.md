@@ -11,3 +11,7 @@ This repository is intended to be used as you follow along in the official Djang
 - Browse the data using Django's admin interface
 
 To get started, navigate to the [Getting Started with Django and Snowflake Quickstart](https://quickstarts.snowflake.com/guide/getting-started-django-snowflake/). Have fun!
+
+
+## Running Locally
+### With Docker
