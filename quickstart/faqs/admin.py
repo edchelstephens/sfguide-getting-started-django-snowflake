@@ -10,7 +10,6 @@ class QuestionAdmin(admin.ModelAdmin):
         "user",
         "question",
         "deadline",
-        "status",
         "created_at",
         "updated_at",
     ]
