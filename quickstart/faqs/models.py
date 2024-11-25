@@ -11,6 +11,10 @@ class Question(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
+    def __str__(self):
+        """Human readable object string representation."""
+        return self.question
+
 
 class Answer(models.Model):
     """Answer model."""
@@ -20,3 +24,7 @@ class Answer(models.Model):
     answer = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
+
+    def __str__(self):
+        """Human readable object string representation."""
+        return self.answer
