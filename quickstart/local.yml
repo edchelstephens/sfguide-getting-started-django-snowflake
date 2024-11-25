@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_nmae: snowflake_django
+    container_name: snowflake_django
     volumes:
       - .:/app
     ports:
