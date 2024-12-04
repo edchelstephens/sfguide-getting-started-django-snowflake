@@ -14,4 +14,12 @@ To get started, navigate to the [Getting Started with Django and Snowflake Quick
 
 
 ## Running Locally
-### With Docker
+### With Docker Container
+1. Build the image
+    `sudo docker build -t snowflake-django .`
+2. Run the container
+    `sudo docker run -p 8000:8000 snowflake-django`
+
+### With Docker Compose
+1. Build and run the containters up
+    `sudo docker-compose -f local.yml up --build`
