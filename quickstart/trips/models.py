@@ -25,3 +25,9 @@ class Trip(models.Model):
     class Meta:
         managed = False
         db_table = "TRIP"
+
+    def __str__(self):
+        """Human readable string representation."""
+        return "Trip {}, Start={}, Finish={}".format(
+            self.trip_id, self.start_station_name, self.end_station_name
+        )
