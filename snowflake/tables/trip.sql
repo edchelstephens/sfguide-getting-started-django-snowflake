@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE SNOWFLAKE_DJANGO.BACKEND.TRIP(
+create or replace table snowflake_django.backend.trip(
     trip_id integer autoincrement start 1 increment 1,
     tripduration timestamp,
     starttime timestamp,
